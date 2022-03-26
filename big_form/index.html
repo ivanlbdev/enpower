@@ -4,10 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href=".css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
 <body>
 
+<div class="container">
+    <div class="big-form-container">
+        <div class="big-form-container__item big-form-container__item_col-70-colm-100 big-form-container__item-form">
+            <form class="composite-form">
+                <div class="composite-form__item">
+                    <p class="composite-form__item-header">1. Требования к газопоршневой установке</p>
+                    <p class="composite-form__item-subheader">Электроснабжение</p>
+                    <div class="composite-form__item-input-container">
+                        <div class="composite-form__input composite-form__input-col-35">
+                            <label>
+                                <span class="input-field-placeholder">Мощность</span>
+                                <input class="composite-form__input-item" type="text" name="Мощность" placeholder="Мощность">
+                            </label>
+                        </div>
+                        <div class="composite-form__input composite-form__input-col-35">
+                            <label>
+                                <span class="input-field-placeholder">Напряжение</span>
+                                <input class="composite-form__input-item" type="text" name="Напряжение" placeholder="Напряжение">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="big-form-container__item big-form-container__item_col-30-colm-100 big-form-container__item-text-content">
+            <img src="./img/manuf.svg" alt="Газопоршневая электростанция">
+            <p>Указанные данные используются только для разработки технико-экономического анализа и выбора газопоршневых
+                установок.</p>
+            <a href="/files/Опросный лист ЭНПАУЭР.pdf">Опросный лист.pdf</a>
+            <p class="small-p">Скачанный опросный лист отправьте на<br>
+                <a href="mailto:info@enpowertech.ru">info@enpowertech.ru</a>
+            </p>
+            <p class="big-p">Есть вопросы?</p>
+            <p>
+                <a href="tel:+7 (499) 346-80-86">+7 (499) 346-80-86</a><br>
+                <span class="small-p light-grey-p">Пн — Пт 9:00-18:00, Сб 9:00- 15:00, Вс — выходной.</span>
+            </p>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
+
+<script>
+    window.addEventListener('load', () => {
+        addCLickPlaceHolder()
+    })
+    function addCLickPlaceHolder() {
+        let inputs = document.querySelectorAll('.composite-form__input-item')
+        for (let item of inputs) {
+            item.addEventListener('focus', (event) => {
+                event.target.previousElementSibling.classList.toggle('input-field-placeholder-active')
+            })
+            item.addEventListener('blur', (event) => {
+                event.target.previousElementSibling.classList.toggle('input-field-placeholder-active')
+            })
+        }
+    }
+</script>

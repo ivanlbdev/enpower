@@ -73,18 +73,23 @@
 }
 
 .composite-form {
+  padding-right: 60px;
   &__item {
     padding: 24px;
     background: #F9FAFC;
+    margin-bottom: 25px;
   }
   &__item-header {
-    margin-bottom: 20px;
     font-weight: 700;
     font-size: 15px;
     line-height: 20px;
     color: #0E1556;
   }
+  &__item-header_mb-20 {
+    margin-bottom: 20px;
+  }
   &__item-subheader {
+    margin-top: 20px;
     font-weight: 400;
     font-size: 15px;
     line-height: 20px;
@@ -97,8 +102,17 @@
   }
   &__input {
     margin: 0 15px;
-    label {
+    .label-non-tap {
       position: relative;
+      margin-bottom: 15px;
+      width: 100%;
+      display: block;
+    }
+    .label-tap {
+      display: block;
+    }
+    label {
+      display: block;
     }
     .input-field-placeholder {
       position: absolute;
@@ -112,22 +126,41 @@
     .input-field-placeholder-active {
       display: block;
     }
-    .composite-form__input-item {
-      width: 100%;
+    .input-field-placeholder-value {
+      position: absolute;
+      right: 20px;
+      top: calc(50% - 10px);
       font-weight: 400;
       font-size: 15px;
       line-height: 20px;
-      padding: 12px 20px;
-      border: 1px solid #C7C9DB;
-      &:focus::placeholder {
-        color: transparent;
-      }
+      color: #666A8B;
+    }
+  }
+  &__input_height-40 {
+    height: 40px;
+  }
+  &__input-item {
+    width: 100% !important;
+    font-weight: 400 !important;
+    font-size: 15px !important;
+    line-height: 20px !important;
+    padding: 12px 20px !important;
+    border: 1px solid #C7C9DB !important;
+    &:focus::placeholder {
+      color: transparent !important;
     }
   }
   &__input-col-35 {
-    flex-basis: 35%;
+    width: calc(36% - 15px);
+  }
+  &__input-col-24 {
+    width: calc(24% - 20px);
+  }
+  &__input-col-100 {
+    width: calc(100% - 20px);
   }
   @media (max-width: 799px) {
+    padding-right: 0;
     &__item {
       padding: 20px 15px;
     }
@@ -139,8 +172,54 @@
       margin: 5px 0;
     }
     &__input-col-35 {
-      flex-basis: 80%;
       width: 85%;
     }
+    &__input-col-24 {
+      width: 50%;
+    }
+  }
+}
+
+.checkbox-ios {
+  display: none;
+  &:checked + .label-checker-ios:after {
+    background: #FF6903;
+  }
+  &:checked + .label-checker-ios:before {
+    top: 2px;
+    left: calc(32px - 18px);
+  }
+}
+.label-checker-ios {
+  padding-left: 48px;
+  position: absolute;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: #0E1556;
+  &:after {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 20px;
+    border-radius: 12px;
+    background: #666A8B;
+    cursor: pointer;
+  }
+  &:before {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    z-index: 100;
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
   }
 }

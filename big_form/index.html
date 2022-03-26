@@ -18,15 +18,94 @@
                     <p class="composite-form__item-subheader">Электроснабжение</p>
                     <div class="composite-form__item-input-container">
                         <div class="composite-form__input composite-form__input-col-35">
-                            <label>
+                            <label class="label-non-tap">
                                 <span class="input-field-placeholder">Мощность</span>
                                 <input class="composite-form__input-item" type="text" name="Мощность" placeholder="Мощность">
+                                <span class="input-field-placeholder-value">кВт</span>
                             </label>
                         </div>
                         <div class="composite-form__input composite-form__input-col-35">
-                            <label>
+                            <label class="label-non-tap">
                                 <span class="input-field-placeholder">Напряжение</span>
                                 <input class="composite-form__input-item" type="text" name="Напряжение" placeholder="Напряжение">
+                                <span class="input-field-placeholder-value">кВт</span>
+                            </label>
+                        </div>
+                    </div>
+                    <p class="composite-form__item-subheader">Теплоснабжение</p>
+                    <div class="composite-form__item-input-container">
+                        <div class="composite-form__input composite-form__input-col-35">
+                            <label class="label-non-tap">
+                                <span class="input-field-placeholder">Мощность</span>
+                                <input class="composite-form__input-item" type="text" name="Мощность, теплоснабжение" placeholder="Мощность">
+                                <span class="input-field-placeholder-value">кВт</span>
+                            </label>
+                        </div>
+                        <div class="composite-form__input composite-form__input-col-35">
+                            <label class="label-non-tap">
+                                <span class="input-field-placeholder">График температур</span>
+                                <input class="composite-form__input-item" type="text" name="График температур" placeholder="График температур">
+                                <span class="input-field-placeholder-value">°С</span>
+                            </label>
+                        </div>
+                    </div>
+                    <p class="composite-form__item-subheader">Пар</p>
+                    <div class="composite-form__item-input-container">
+                        <div class="composite-form__input composite-form__input-col-24">
+                            <label class="label-non-tap">
+                                <span class="input-field-placeholder">Объем</span>
+                                <input class="composite-form__input-item" type="text" name="Объем" placeholder="Объем">
+                                <span class="input-field-placeholder-value">т/ч</span>
+                            </label>
+                        </div>
+                        <div class="composite-form__input composite-form__input-col-24">
+                            <label class="label-non-tap">
+                                <span class="input-field-placeholder">Температура</span>
+                                <input class="composite-form__input-item" type="text" name="Температура" placeholder="Температура">
+                                <span class="input-field-placeholder-value">°С</span>
+                            </label>
+                        </div>
+                        <div class="composite-form__input composite-form__input-col-24">
+                            <label class="label-non-tap">
+                                <span class="input-field-placeholder">Давление</span>
+                                <input class="composite-form__input-item" type="text" name="Давление" placeholder="Давление">
+                                <span class="input-field-placeholder-value">МПа</span>
+                            </label>
+                        </div>
+                    </div>
+                    <p class="composite-form__item-subheader">Холодоснабжение</p>
+                    <div class="composite-form__item-input-container">
+                        <div class="composite-form__input composite-form__input-col-35">
+                            <label class="label-non-tap">
+                                <span class="input-field-placeholder">Производительность</span>
+                                <input class="composite-form__input-item" type="text" name="Производительность" placeholder="Производительность">
+                                <span class="input-field-placeholder-value">кВт</span>
+                            </label>
+                        </div>
+                        <div class="composite-form__input composite-form__input-col-35">
+                            <label class="label-non-tap">
+                                <span class="input-field-placeholder">График температур</span>
+                                <input class="composite-form__input-item" type="text" name="График температур" placeholder="График температур">
+                                <span class="input-field-placeholder-value">°С</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="composite-form__item">
+                    <p class="composite-form__item-header composite-form__item-header_mb-20">2. Режим работы</p>
+                    <div class="composite-form__item-input-container">
+                        <div class="composite-form__input composite-form__input_height-40">
+                            <label class="label-tap">
+                                <input type="checkbox" name="Островной" class="checkbox-ios" id="check-1">
+                                <label for="check-1" class="label-checker-ios">Основной</label>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="composite-form__item-input-container">
+                        <div class="composite-form__input composite-form__input_height-40">
+                            <label class="label-tap">
+                                <input type="checkbox" name="Параллельная работа с электрической сетью" class="checkbox-ios" id="check-2">
+                                <label for="check-2" class="label-checker-ios">Параллельная работа с электрической сетью</label>
                             </label>
                         </div>
                     </div>
@@ -34,7 +113,7 @@
             </form>
         </div>
         <div class="big-form-container__item big-form-container__item_col-30-colm-100 big-form-container__item-text-content">
-            <img src="./img/manuf.svg" alt="Газопоршневая электростанция">
+            <img src="/images/manuf.svg" alt="Газопоршневая электростанция">
             <p>Указанные данные используются только для разработки технико-экономического анализа и выбора газопоршневых
                 установок.</p>
             <a href="/files/Опросный лист ЭНПАУЭР.pdf">Опросный лист.pdf</a>

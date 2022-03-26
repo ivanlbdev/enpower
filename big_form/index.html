@@ -94,15 +94,21 @@
                 <div class="composite-form__item">
                     <p class="composite-form__item-header composite-form__item-header_mb-20">2. Режим работы</p>
                     <div class="composite-form__item-input-container">
-                        <div class="composite-form__input composite-form__input_height-40">
-                            <label class="label-tap">
+                        <div class="composite-form__input composite-form__input_height-40 composite-form__input_flex-column">
+                            <label class="label-tap" style="width: 130px">
                                 <input type="checkbox" name="Островной" class="checkbox-ios" id="check-1">
                                 <label for="check-1" class="label-checker-ios">Основной</label>
                             </label>
+                            <div class="additional-info">
+                                <img class="additional-info__image" src="images/additional-circle.svg">
+                                <div class="additional-info__text">
+                                    <span>Контейнерные модули объединенные в единый машинный зал.</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="composite-form__item-input-container">
-                        <div class="composite-form__input composite-form__input_height-40">
+                        <div class="composite-form__input composite-form__input_height-40 composite-form__input_flex-column">
                             <label class="label-tap">
                                 <input type="checkbox" name="Параллельная работа с электрической сетью" class="checkbox-ios" id="check-2">
                                 <label for="check-2" class="label-checker-ios">Параллельная работа с электрической сетью</label>
@@ -136,6 +142,15 @@
     window.addEventListener('load', () => {
         addCLickPlaceHolder()
     })
+    document.addEventListener('click', (event) => {
+        if (event.target.className != 'additional-info__image') {
+            if (document.querySelectorAll('.additional-info__text_active')) {
+                for (let item of document.querySelectorAll('.additional-info__text_active')) {
+                    item.classList.remove('additional-info__text_active')
+                }
+            }
+        }
+    })
     function addCLickPlaceHolder() {
         let inputs = document.querySelectorAll('.composite-form__input-item')
         for (let item of inputs) {
@@ -146,5 +161,18 @@
                 event.target.previousElementSibling.classList.toggle('input-field-placeholder-active')
             })
         }
+
+        let additional_labels = document.querySelectorAll('.additional-info__image')
+
+        for (let item of additional_labels) {
+            item.addEventListener('click', (event) => {
+                openAdditionalInfo(event)
+            })
+        }
+    }
+
+    function openAdditionalInfo(event) {
+        event.target.nextElementSibling.classList.toggle('additional-info__text_active')
+
     }
 </script>

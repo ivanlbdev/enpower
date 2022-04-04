@@ -69,6 +69,9 @@
   .big-form-container__item_col-30-colm-100 {
     flex-basis: 100%;
   }
+  .big-form-container__item-text-content {
+    padding-bottom: 40px;
+  }
   .big-form-container__item-text-content img {
     display: none;
   }
@@ -213,16 +216,16 @@
   flex-direction: column;
   justify-content: center;
 }
-.composite-form__submit-block p, .composite-form__submit-block a {
-  font-weight: 400;
-  font-size: 12px;
+.composite-form__submit-block span, .composite-form__submit-block a {
+  font-weight: 400 !important;
+  font-size: 12px !important;
   line-height: 20px;
 }
-.composite-form__submit-block p {
-  color: #666A8B;
+.composite-form__submit-block span {
+  color: #666A8B !important;
 }
 .composite-form__submit-block a {
-  color: #FF6903;
+  color: #FF6903 !important;
 }
 .composite-form__submit-btn {
   margin-right: 20px;
@@ -265,9 +268,6 @@
   .composite-form__submit-btn {
     width: 100%;
     margin-top: 30px;
-  }
-  .composite-form__item-text-content {
-    padding-bottom: 40px;
   }
 }
 
@@ -352,6 +352,23 @@ label.fsz-15 {
   font-size: 15px;
   line-height: 20px;
   color: #122D44;
+}
+
+.download-list {
+  position: relative;
+  padding-left: 25px;
+}
+.download-list:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  background-image: url(../svg/download-orange.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /*# sourceMappingURL=style.css.map */
